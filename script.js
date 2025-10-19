@@ -13,7 +13,7 @@
       updateTime();
 
       // Optional: Update every second
-      setInterval(updateTimestamp, 1000);
+      setInterval(updateTime, 1000);
 
       // Accessibility: Ensure all links are keyboard navigable
       document.querySelectorAll("a").forEach((link) => {
