@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Frontend Wizards Stage 1</title>
+    <!-- Added Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="script.js"></script>
+  </head>
+  <body class="bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-100">
+      <ul class="flex justify-center gap-8 p-4 flex-wrap max-w-4xl mx-auto">
+        <li>
+          <a href="index.html" class="nav-link" data-testid="nav-profile"
+            >Profile</a
+          >
+        </li>
+        <li>
+          <a href="contact.html" class="nav-link" data-testid="nav-contact"
+            >Contact Us</a
+          >
+        </li>
+        <li>
+          <a href="about.html" class="nav-link active" data-testid="nav-about"
+            >About Me</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <main data-testid="test-about-page" class="max-w-2xl mx-auto p-8">
+      <article class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <header
+          class="bg-gradient-to-r from-slate-800 to-slate-700 text-white p-12"
+        >
+          <h1 class="text-4xl font-bold text-center">About Me</h1>
+          <p class="text-slate-200 text-center mt-2">
+            My journey, reflections, and aspirations
+          </p>
+        </header>
+
+        <div class="p-8 space-y-8">
+          <!-- Bio Section -->
+          <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Who I Am</h2>
+            <p
+              data-testid="test-about-bio"
+              class="text-slate-600 leading-relaxed mb-4"
+            >
+              I'm Alex Johnson, a passionate product designer with over 5 years
+              of experience creating user-centered digital experiences. I
+              believe that great design is not just about aesthetics—it's about
+              solving real problems and making people's lives easier. I'm
+              constantly learning, experimenting with new technologies, and
+              pushing the boundaries of what's possible in design.
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+              When I'm not designing, you'll find me exploring new hiking
+              trails, experimenting with photography, or diving into a good
+              book. I'm a firm believer in work-life balance and the importance
+              of continuous growth.
+            </p>
+          </section>
+
+          <!-- Goals Section -->
+          <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">
+              Goals in This Program
+            </h2>
+            <ul data-testid="test-about-goals" class="text-slate-600 space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold mt-1 flex-shrink-0"
+                  >•</span
+                >
+                <span
+                  >Master semantic HTML and accessibility best practices to
+                  create inclusive digital experiences</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold mt-1 flex-shrink-0"
+                  >•</span
+                >
+                <span
+                  >Deepen my understanding of form validation and user input
+                  handling</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold mt-1 flex-shrink-0"
+                  >•</span
+                >
+                <span
+                  >Build responsive, mobile-first applications that work
+                  seamlessly across all devices</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold mt-1 flex-shrink-0"
+                  >•</span
+                >
+                <span
+                  >Develop strong JavaScript skills for interactive and dynamic
+                  web applications</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold mt-1 flex-shrink-0"
+                  >•</span
+                >
+                <span
+                  >Learn testing methodologies and write testable, maintainable
+                  code</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold mt-1 flex-shrink-0"
+                  >•</span
+                >
+                <span
+                  >Collaborate with other developers and learn from their
+                  experiences</span
+                >
+              </li>
+            </ul>
+          </section>
+
+          <!-- Areas of Low Confidence Section -->
+          <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">
+              Areas of Low Confidence
+            </h2>
+            <ul
+              data-testid="test-about-confidence"
+              class="text-slate-600 space-y-3"
+            >
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold mt-1 flex-shrink-0"
+                  >•</span
+                >
+                <span
+                  >Advanced JavaScript concepts like closures, prototypes, and
+                  async/await patterns</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold mt-1 flex-shrink-0"
+                  >•</span
+                >
+                <span>Backend development and database management</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold mt-1 flex-shrink-0"
+                  >•</span
+                >
+                <span>Writing comprehensive unit and integration tests</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold mt-1 flex-shrink-0"
+                  >•</span
+                >
+                <span
+                  >Performance optimization and debugging complex issues</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold mt-1 flex-shrink-0"
+                  >•</span
+                >
+                <span
+                  >Working with version control systems like Git in team
+                  environments</span
+                >
+              </li>
+            </ul>
+          </section>
+
+          <!-- Note to Future Self Section -->
+          <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">
+              Note to Future Self
+            </h2>
+            <div
+              data-testid="test-about-future-note"
+              class="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-lg text-amber-900"
+            >
+              <p class="mb-4">
+                <strong>Remember:</strong> Progress over perfection. You've come
+                a long way, and every challenge you face is an opportunity to
+                grow. Don't be afraid to make mistakes—they're your best
+                teachers.
+              </p>
+              <p class="mb-4">
+                Stay curious, keep learning, and never lose sight of why you
+                started this journey. The path to mastery is long, but every
+                step counts. Celebrate the small wins, and don't compare your
+                beginning to someone else's middle.
+              </p>
+              <p>
+                You've got this! Keep pushing forward, stay humble, and remember
+                that the best time to plant a tree was 20 years ago, but the
+                second best time is now. 🌱
+              </p>
+            </div>
+          </section>
+
+          <!-- Extra Thoughts Section -->
+          <section>
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">
+              Extra Thoughts
+            </h2>
+            <div
+              data-testid="test-about-extra"
+              class="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-lg text-blue-900"
+            >
+              <p class="mb-4">
+                I believe that the future of web development is about creating
+                experiences that are not just functional, but also delightful
+                and accessible to everyone. As developers and designers, we have
+                a responsibility to build with empathy and inclusively at the
+                forefront.
+              </p>
+              <p>
+                This program has been an incredible opportunity to strengthen my
+                fundamentals and connect with like-minded individuals. I'm
+                excited to see where this journey takes me and how I can
+                contribute to building a better web for everyone.
+              </p>
+            </div>
+          </section>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
