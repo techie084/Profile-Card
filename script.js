@@ -70,7 +70,7 @@ const validationRules = {
 };
 
 // Validate individual field
-function validateField(fieldName) {
+const validateField = (fieldName) => {
   const field = form.elements[fieldName];
   const rule = validationRules[fieldName];
   const errorElement = document.getElementById(`error-${fieldName}`);
@@ -90,7 +90,7 @@ function validateField(fieldName) {
     errorElement.classList.add("hidden");
     return true;
   }
-}
+};
 
 // Real-time validation on blur
 Object.keys(validationRules).forEach((fieldName) => {
@@ -121,18 +121,22 @@ form.addEventListener("submit", (e) => {
     form.reset();
 
     // Clear error states
-    document.querySelectorAll(".form-group").forEach((group) => {
+    const groups = document.querySelectorAll(".form-group").forEach((group) => {
       group.classList.remove("error");
     });
-    document.querySelectorAll('[role="alert"]').forEach((msg) => {
-      if (msg !== successMessage) {
-        msg.classList.add("hidden");
-      }
-    });
-    document.querySelectorAll("input, textarea").forEach((field) => {
-      field.classList.remove("border-red-600", "bg-red-50");
-      field.classList.add("border-slate-300");
-    });
+    const messages = document
+      .querySelectorAll('[role="alert"]')
+      .forEach((msg) => {
+        if (msg !== successMessage) {
+          msg.classList.add("hidden");
+        }
+      });
+    const fields = document
+      .querySelectorAll("input, textarea")
+      .forEach((field) => {
+        field.classList.remove("border-red-600", "bg-red-50");
+        field.classList.add("border-slate-300");
+      });
 
     // Hide success message after 5 seconds
     setTimeout(() => {
@@ -140,63 +144,3 @@ form.addEventListener("submit", (e) => {
     }, 5000);
   }
 });
-
-// Update active nav link
-function updateNavLinks() {
-  document.querySelectorAll("nav a").forEach((link) => {
-    if (link.href === window.location.href) {
-      link.classList.add("text-blue-700", "bg-blue-100", "font-semibold");
-      link.classList.remove("text-slate-600");
-    } else {
-      link.classList.remove("text-blue-700", "bg-blue-100", "font-semibold");
-      link.classList.add("text-slate-600");
-    }
-  });
-}
-
-// Add base nav link styles
-document.querySelectorAll("nav a").forEach((link) => {
-  link.classList.add(
-    "px-3",
-    "py-2",
-    "rounded-lg",
-    "transition-all",
-    "duration-300",
-    "font-medium",
-    "focus:outline-2",
-    "focus:outline-offset-2",
-    "focus:outline-blue-500"
-  );
-});
-
-updateNavLinks();
-
-// Update active nav link
-function updateNavLinks() {
-  document.querySelectorAll("nav a").forEach((link) => {
-    if (link.href === window.location.href) {
-      link.classList.add("text-blue-700", "bg-blue-100", "font-semibold");
-      link.classList.remove("text-slate-600");
-    } else {
-      link.classList.remove("text-blue-700", "bg-blue-100", "font-semibold");
-      link.classList.add("text-slate-600");
-    }
-  });
-}
-
-// Add base nav link styles
-document.querySelectorAll("nav a").forEach((link) => {
-  link.classList.add(
-    "px-3",
-    "py-2",
-    "rounded-lg",
-    "transition-all",
-    "duration-300",
-    "font-medium",
-    "focus:outline-2",
-    "focus:outline-offset-2",
-    "focus:outline-blue-500"
-  );
-});
-
-updateNavLinks();

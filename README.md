@@ -1,7 +1,7 @@
 # 🌟 Profile Card
 
 A simple and elegant **Profile Card** built with modern web technologies.  
-It displays personal details like **name, hobbies, dislikes**, and **social media links** in a beautiful card layout.
+It displays personal details like **contact, about, name, hobbies, dislikes**, and **social media links** in a beautiful card layout.
 
 ---
 

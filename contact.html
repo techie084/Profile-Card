@@ -5,49 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - Frontend Wizards Stage 1</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      @keyframes slideInLeft {
-        from {
-          opacity: 0;
-          transform: translateX(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-      @keyframes shake {
-        0%,
-        100% {
-          transform: translateX(0);
-        }
-        25% {
-          transform: translateX(-5px);
-        }
-        75% {
-          transform: translateX(5px);
-        }
-      }
-      .animate-fade-in-up {
-        animation: fadeInUp 0.6s ease-out;
-      }
-      .animate-slide-in-left {
-        animation: slideInLeft 0.6s ease-out;
-      }
-      .animate-shake {
-        animation: shake 0.5s ease-in-out;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script async src="script.js"></script>
   </head>
   <body class="bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen">
     <!-- Navigation -->
@@ -96,6 +55,7 @@
             style="animation-delay: 0.2s"
           >
             Have a question or want to collaborate? I'd love to hear from you!
+            😊
           </p>
         </header>
 
