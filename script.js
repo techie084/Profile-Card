@@ -3,6 +3,9 @@
 const links = document.querySelectorAll("nav a");
 const form = document.getElementById("contactForm");
 const timeElement = document.querySelector("[data-testid='test-user-time']");
+const fields = document.querySelectorAll("input, textarea");
+const messages = document.querySelectorAll('[role="alert"]');
+const groups = document.querySelectorAll(".form-group");
 const successMessage = document.querySelector(
   '[data-testid="test-contact-success"]'
 );
@@ -121,22 +124,20 @@ form.addEventListener("submit", (e) => {
     form.reset();
 
     // Clear error states
-    const groups = document.querySelectorAll(".form-group").forEach((group) => {
+    groups.forEach((group) => {
       group.classList.remove("error");
     });
-    const messages = document
-      .querySelectorAll('[role="alert"]')
-      .forEach((msg) => {
-        if (msg !== successMessage) {
-          msg.classList.add("hidden");
-        }
-      });
-    const fields = document
-      .querySelectorAll("input, textarea")
-      .forEach((field) => {
-        field.classList.remove("border-red-600", "bg-red-50");
-        field.classList.add("border-slate-300");
-      });
+
+    messages.forEach((msg) => {
+      if (msg !== successMessage) {
+        msg.classList.add("hidden");
+      }
+    });
+
+    fields.forEach((field) => {
+      field.classList.remove("border-red-600", "bg-red-50");
+      field.classList.add("border-slate-300");
+    });
 
     // Hide success message after 5 seconds
     setTimeout(() => {
